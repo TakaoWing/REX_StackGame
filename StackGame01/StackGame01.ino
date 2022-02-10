@@ -14,6 +14,5 @@ void setup() {
 void loop() {
   power = analogRead(0); // アナログピン0番から値を読み取る．
   Serial.println(power); // シリアルポートにpowerを出力する．printlnは改行あり
-  delay(1000); 1000ms（1秒）待つ
-  
+  delay(1000); // 1000ms（1秒）待つ
 }
