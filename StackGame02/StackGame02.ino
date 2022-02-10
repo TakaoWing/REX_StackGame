@@ -19,5 +19,5 @@ void loop() {
   force = analogRead(forcePin); // アナログピン0番から値を読み取る．
   Serial.println(force); // シリアルポートにforce出力する．printlnは改行あり
   analogWrite(ledPin, force/4); // powerをアナログ出力としてLEDを点灯
-  delay(10); // 10ms（00.1秒）待つ
+  delay(10); // 10ms（0.01秒）待つ
 }
