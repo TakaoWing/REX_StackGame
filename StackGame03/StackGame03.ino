@@ -13,16 +13,16 @@ int limit; // LEDが点灯する時の圧力センサの値
 void setup() {
   Serial.begin(9600); // シリアルポートの設定
   pinMode(ledPin, OUTPUT); // LEDを出力に設定
-  limit = random(180,230); // 180~229の間でランダムに決定しLEDが点灯する圧力を変える
+  limit = 200; // 閾値を200にする
 }
 
 // ずっと繰り返し実行する
 void loop() {
   force = analogRead(forcePin); // アナログピン0番から値を読み取る．
   Serial.println(force); // シリアルポートにforce出力する．printlnは改行あり
-  if(force > limit){
+  if(force > limit){ // forceがlimitより大きい場合
     digitalWrite(ledPin, HIGH); // LEDを点灯
-  }else{
+  }else{ // 小さい場合
     digitalWrite(ledPin, LOW); // LEDを消灯
   }
   delay(10); // 10ms（00.1秒）待つ
