@@ -1,9 +1,9 @@
 /*積み上げゲームをつくろう その2
    内容
-   圧力センサの値をLEDで表す
+   圧力センサの値をLEDで表す．
 */
 
-const int ledPin = 13; // LEDを13ピンに接続
+const int ledPin = 9; // LEDを9ピンに接続
 const int forcePin = A0; // 圧力センサをアナログ0ピンに接続
 int force = 0; // 圧力センサが計測する力
 
