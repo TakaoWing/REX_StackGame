@@ -13,7 +13,7 @@ int limit; // LEDが点灯する時の圧力センサの値
 void setup() {
   Serial.begin(9600); // シリアルポートの設定
   pinMode(ledPin, OUTPUT); // LEDを出力に設定
-  limit = 200; // 閾値を200にする
+  limit = random(180,230); // 180~229の間でランダムに決定しLEDが点灯する圧力を変える
 }
 
 // ずっと繰り返し実行する
